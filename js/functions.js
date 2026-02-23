@@ -1,10 +1,9 @@
-function isValidLength (string, maxLength) {
-  return string.length <= maxLength;
-}
-console.log (isValidLength('проверка', 5));
+const isValidLength = (string, maxLength) => string.length <= maxLength;
 
-function isPalindrome(string){
-  let normalized = string.replaceAll(' ', '').toUpperCase();
+isValidLength();
+
+const isPalindrome = (string) => {
+  const normalized = string.replaceAll(' ', '').toUpperCase();
   let reversed = '';
 
   for(let i = normalized.length - 1; i >= 0 ; i--){
@@ -12,8 +11,7 @@ function isPalindrome(string){
   }
 
   return reversed === normalized;
-}
+};
 
-console.log (isPalindrome('Лёша на полке клопа нашёл'));
-
+isPalindrome();
 
